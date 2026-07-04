@@ -1,0 +1,466 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #050505;
+  color: #fff;
+}
+
+.header-container {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid color-mix(in oklab, #f6339a 10%, transparent);
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-logo-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #f6339a;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 8px rgba(236,72,153,0.15);
+}
+
+.header-logo h1 {
+  font-size: 2rem;
+  font-weight: 300;
+  font-style: italic;
+  color: #fb64b6;
+}
+
+.header-logo-box h2 {
+  font-size: 12px;
+  font-weight: 400;
+  color: color-mix(in oklab, #fda5d5 60%, transparent);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.header-logo-box p {
+  font-family: "Playfair Display", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 14px;
+  color: color-mix(in oklab, #fccee8 40%, transparent);
+}
+
+.header-timer-box {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  padding: .4rem .8rem;
+  background: color-mix(in oklab, #f6339a 10%, transparent);
+  border: 1px solid color-mix(in oklab, #f6339a 15%, transparent);
+  border-radius: calc(infinity * 1px);
+  box-shadow: 0 0 6px 3px rgba(236,72,153,0.15);
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: .3rem;
+  background: transparent;
+}
+
+.timer p {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  gap: .4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: color-mix(in oklab, #fda5d5 60%, transparent);
+  background: transparent;
+}
+
+.timer span {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  font-size: 14px;
+  color: #f4f4f5;
+  background: transparent;
+}
+
+.icon {
+  padding: .1rem;
+  font-size: 52px;
+  background: color-mix(in oklab, #f6339a 10%, transparent);
+  color: #fb64b6;
+  border-radius: calc(infinity * 1px);
+}
+
+.present-container {
+  padding: 2rem 1rem;
+}
+
+.present-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.present-title span{
+  padding: .8rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  border-radius: calc(infinity * 1px);
+  border: 1px solid color-mix(in oklab, #f6339a 30%, transparent);
+  background: color-mix(in oklab, #f6339a 10%, transparent);
+  color: #fda5d5;
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+
+.present-timer {
+  display: none;
+}
+
+.present-title h2 {
+  font-size: 3rem;
+  font-family: "Playfair Display", Georgia, Cambria, "Times New Roman", Times, serif;
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(to right, #fce7f3 10%, #fda5d5 80%, oklch(89.2% 0.058 10.001) 100%);
+  font-weight: 800;
+}
+
+.present-title p {
+  font-size: 16px;
+  color: #9f9fa9;
+  margin-inline: auto;
+  max-width: 512px;
+}
+
+.present-years {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  padding: 1rem 2rem;
+  gap: 2rem;
+  align-items: center;
+  background-color: color-mix(in oklab, #ffffff 5%, transparent);
+  border: 1px solid color-mix(in oklab, #fff 10%, transparent);
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  background-image: linear-gradient(to right, transparent, color-mix(in oklab, #f6339a 20%, transparent), transparent);
+}
+
+.present-box {
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  background: transparent;
+}
+
+.present-box h2 {
+  color: color-mix(in oklab, #fda5d5 60%, transparent);
+  font-size: 14px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  margin-bottom: .6rem;
+}
+
+.present-box-line {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+  background: transparent;
+}
+
+.present-box-line span {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+  padding: .8rem;
+  background-color: color-mix(in oklab, #09090b 40%, transparent);
+  border: 1px solid color-mix(in oklab, #f6339a 10%, transparent);
+  border-radius: 12px;
+  align-items: center;
+}
+
+.present-box-line span h1 {
+  font-size: 2rem;
+  background: transparent;
+  font-weight: 600;
+  color: #fb64b6;
+}
+
+.present-box-line span p {
+  font-size: 12px;
+  color: #71717b;
+  background: transparent;
+  text-transform: uppercase;
+}
+
+.present-box-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: .8rem;
+  background: transparent;
+}
+
+.present-box-info h2 {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: color-mix(in oklab, #fb64b6 60%, transparent);
+  font-weight: 700;
+  background: transparent;
+}
+
+.present-box-info p {
+  font-size: 24px;
+  background: transparent;
+  color: #fff;
+  font-family: "Playfair Display", Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  align-items: center;
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+}
+
+.sobre-content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  background: color-mix(in oklab, #fff 5%, transparent);
+  border: 1px solid color-mix(in oklab, #fff 10%, transparent);
+  border-radius: 24px;
+  position: relative;
+}
+
+.sobre-content-text span {
+  gap: .6rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fb64b6;
+  display: flex;
+  align-items: center;
+  background: transparent;
+}
+
+.sobre-content-text h1 {
+  font-size: 2.5rem;
+  font-family: "Playfair Display", Georgia, Cambria, "Times New Roman", Times, serif;
+  color: #fff;
+  font-weight: 600;
+  background: transparent;
+}
+
+.sobre-content-text p {
+  color: #d4d4d8;
+  background: transparent;
+  font-style: italic;
+  line-height: 1.2;
+}
+
+.sobre-content-boxes {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.sobre-content-box {
+  background: color-mix(in oklab,#fff 5%, transparent);
+  border: 1px solid color-mix(in oklab,#fff 10%, transparent);
+  padding: 1rem 1.2rem;
+  border-radius: 16px;
+}
+
+.sobre-content-box h2 {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .2rem 0;
+  margin-bottom: .5rem;
+  font-size: 14px;
+  color: #fccee8;
+  text-transform: uppercase;
+  background: transparent;
+  border-bottom: 1px solid color-mix(in oklab, #f6339a 10%, transparent);;
+}
+
+.sobre-content-box p {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .2rem .6rem;
+  border-radius: calc(infinity * 1px);
+  background-color: color-mix(in oklab, #f6339a 10%, transparent);
+  border: 1px solid color-mix(in oklab,  #f6339a 20%, transparent);
+  color: #fccee8;
+  font-size: 13px;
+  margin: .3rem;
+}
+.icon {
+  background: transparent;
+  color: #fb64b6;
+}
+.galeria-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+.galeria-content-boxes {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+.galeria-content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  overflow: hidden;
+  background: color-mix(in oklab, #fff 5%, transparent);
+  border-radius: 16px;
+  backdrop-filter: blur(2px);
+  border: 1px solid color-mix(in oklab, #f6339a 20%, transparent);
+  transition: all .3s;
+}
+.galeria-content-box:hover {
+  box-shadow: inset 0 1px 8px 4px color-mix(in oklab, #f6339a 60%, transparent),0 1px 8px 4px color-mix(in oklab, #f6339a 20%, transparent) ;
+  transform: rotate3d(5,1,0, 15deg);
+}
+.galeria-content-box:hover img{
+  transform: scale(1.02);
+}
+.galeria-content-box img {
+  width: 100%;
+  position: relative;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  background: transparent;
+  border-radius: 4px;
+  border: 1px solid #18181b;
+  transition: all .3s;
+}
+
+.galeria-content-box p {
+  font-family: "Great Vibes", cursive, sans-serif;
+  color: #fda5d5;
+  background: transparent;
+  font-size: 24px;
+}
+
+.mensagens-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+.mensagens-content {
+  display: grid;
+  width: 100%;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+.mensagens-content-box {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem .8rem;
+  gap: 1rem;
+  background: color-mix(in oklab, #fff 5%, transparent);
+  border: 1px solid color-mix(in oklab, #fff 10%, transparent);
+  border-radius: 12px;
+  max-width: 630px;
+}
+
+.mensagens-content-title {
+  padding: .5rem 0;
+  background: transparent;
+  border-bottom: 1px solid color-mix(in oklab, #fff 5%, transparent);
+}
+.mensagens-content-title h2 {
+  background: transparent;
+  color: #fda5d5;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.mensagens-content-text {
+  background: transparent;
+}
+
+.mensagens-content-text p {
+  background: transparent;
+  color: #9f9fa9;
+  font-size: 16px;
+}
+
+.frases-content-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.frases-content-title h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  color: #f6339a;
+}
+
+.frases-content-text p{
+  color: #9f9fa9;
+}
+
+.frases-content-text span {
+  color: #fb64b6;
+}
+
+@media (max-width: 500px){
+  body {
+    background: color-mix(in oklab, #fb64b6 50%, transparent);
+  }
+
+  .header-timer {
+    display: none;
+  }
+
+  .present-timer {
+    display: flex;
+    padding: 2rem 0;
+    justify-content: center;
+    align-items: center;
+
+    & .header-timer-box {
+      padding: .4rem 1.2rem;
+    }
+  }
+}
+
